@@ -1,5 +1,3 @@
-# Class, Objects and Methods
-# Class variables : check instance>class>inherit class
 # Classmethods
 # Static Methods
 class Employee:
@@ -35,31 +33,32 @@ class Employee:
             return False
         return True
 
-    def __str__(self) -> str:
-        return f"{self.fullName()} has pay of {self.pay} & can connect on email {self.email}"
+    
 
-emp1 = Employee('Praful','Patekar',36000)
-emp2 = Employee('Harsh','Patekar',33000)
-
-str1='Sachin-Patel-30000'
-new_emp = Employee.from_string(str1) # calling class method
-
-import datetime
-my_date = datetime.date(2023,4,12)
 
 if __name__=="__main__":
+    emp1 = Employee('Praful','Patekar',36000)
+    emp2 = Employee('Harsh','Patekar',50000)
+    
+    str1='Sachin-Patel-30000'
+    new_emp = Employee.from_string(str1) # calling class method
+
+    import datetime
+    my_date = datetime.date(2023,4,12)
+
     print(Employee.num_of_emps)
-    # print(emp2)
-    # print(emp1.pay)
-    # Employee.applyRaise(emp1)
-    # print(emp1.pay)
-    # print(Employee.__dict__)
-    # print(emp1.__dict__)
-    # Employee.set_raise_amt(1.06)
-    # print(Employee.raise_amt)
-    # print(emp1.raise_amt)
-    # print(emp2.raise_amt)
-    # print(new_emp)
+    print(emp2)
+    print(emp1.pay)
+    Employee.applyRaise(emp1)
+    print(emp1.pay)
+    print(Employee.__dict__)
+    print(emp1.__dict__)
+    Employee.set_raise_amt(1.06)
+    print(Employee.raise_amt)
+    print(emp1.raise_amt)
+    print(emp2.raise_amt)
+    print(new_emp)
     print(Employee.is_weekday(my_date))
+
 
 
