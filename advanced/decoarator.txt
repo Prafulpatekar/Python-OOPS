@@ -1,0 +1,2 @@
+Called by get_logged and result: 10
+Called by get_logged and result: 10
