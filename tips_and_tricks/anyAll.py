@@ -1,15 +1,16 @@
-# Any and all Functions major functions
+"""
+Any and all Functions major functions
+"""
 import random
-# x = [True,False,False,False]
-# print(any(x))
-# print(all(x))
+x = [True,False,False,False]
+print(any(x))
+print(all(x))
 
-# numbers = [random.randint(1,100) for x in range(10)]
+numbers = [random.randint(1,100) for x in range(10)]
 numbers = [2,4,6,8]
 even = lambda x: x % 2 ==0
 
 result = [even(number) for number in numbers]
-
 
 
 if all(result):
