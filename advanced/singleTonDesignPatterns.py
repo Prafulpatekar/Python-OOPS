@@ -16,7 +16,7 @@ class PersonSingleton(IPerson):
 
     def __init__(self,name,age) -> None:
         if PersonSingleton.__instance !=None:
-            raise Exception("Singleton cannot be instantiated more than once")
+            raise SystemError("Singleton cannot be instantiated more than once")
         else:
             self.name = name
             self.age = age
