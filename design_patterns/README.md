@@ -2,29 +2,28 @@
 
 ## 1. creational design pattern
 ### How objects are created
-- a. SingleTon
-- b. Factory
-- c. Builder
-- d. Prototype
+- SingleTon
+- Factory
+- Builder
+- Prototype
 
 ## 2. Structural design pattern
 ### Simplify the structure by identifying relationship between objects
-- a. Adapter
-- b. Decorator
-- c. Facade
-- d. Proxy
+- Adapter
+- Decorator
+- Facade
+- Proxy
 
 ## 3. Behavioural Design pattern
 ### How object behave
-- a. Chain of responsibility
-- b. Startegy
-- c. Oberver
-- d. State
-- e. Template
-- f. Flyweight
+- Chain of responsibility
+- Startegy
+- Oberver
+- State
+- Template
+- Flyweight
 
 ## 4. Concurrency Design pattern
 ### Deal with multi-threaded programming paradigm
-- a. Read Write lock pattern
-- b. Thread pool pattern
-- c. 
+- Read Write lock pattern
+- Thread pool pattern
