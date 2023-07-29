@@ -3,7 +3,7 @@ from abc import ABCMeta,abstractstaticmethod
 
 class IPerson(metaclass=ABCMeta):
     @abstractstaticmethod
-    def print_data():
+    def print_data(self):
         """ Implement in Child Class """
 
 class PersonSingleton(IPerson):
