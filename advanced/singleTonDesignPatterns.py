@@ -13,7 +13,7 @@ class PersonSingleton(IPerson):
         if PersonSingleton.__instance==None:
             PersonSingleton("Default Name",0)
         return PersonSingleton.__instance
-    
+
     def __init__(self,name,age) -> None:
         if PersonSingleton.__instance !=None:
             raise Exception("Singleton cannot be instantiated more than once")
