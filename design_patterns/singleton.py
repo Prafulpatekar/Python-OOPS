@@ -2,78 +2,78 @@
 Pattern Name - Singleton
 Pattern Type - Creational Design Pattern
 """
-# Solution 1
-# class SingleTon(object):
-#     def __new__(cls,*args,**kwargs):
-#         if not hasattr(cls,"_instance"):
-#             cls._instance = super().__new__(cls,*args,**kwargs)
-#         return cls._instance
+Solution 1
+class SingleTon(object):
+    def __new__(cls,*args,**kwargs):
+        if not hasattr(cls,"_instance"):
+            cls._instance = super().__new__(cls,*args,**kwargs)
+        return cls._instance
 
-# obj_1 = SingleTon()
-# print("Object_1 ==> ",obj_1)
-# obj_1.data = 10
+obj_1 = SingleTon()
+print("Object_1 ==> ",obj_1)
+obj_1.data = 10
 
-# obj_2 = SingleTon()
-# print("Object_2 ==> ",obj_2)
-# print("Object_2 data ==> ",obj_2.data)
-# obj_2.data = 5
+obj_2 = SingleTon()
+print("Object_2 ==> ",obj_2)
+print("Object_2 data ==> ",obj_2.data)
+obj_2.data = 5
 
-# print("Object_1  data ==> ",obj_1.data)
+print("Object_1  data ==> ",obj_1.data)
 
-# # Solution 2
-# class Borg(object):
-#     _shared = {}
-#     def __init__(self) -> None:
-#         self.__dict__ = self._shared
+# Solution 2
+class Borg(object):
+    _shared = {}
+    def __init__(self) -> None:
+        self.__dict__ = self._shared
 
-# class SingleTon(object):
-#     def __init__(self,name) -> None:
-#         super().__init__()
-#         self.name = name
+class SingleTon(object):
+    def __init__(self,name) -> None:
+        super().__init__()
+        self.name = name
 
-# o1 = SingleTon("Praful")
-# print("Object 1 ==>",o1)
-# print("Object 1 ==>",o1.name)
+o1 = SingleTon("Praful")
+print("Object 1 ==>",o1)
+print("Object 1 ==>",o1.name)
 
-# o2 = SingleTon("Harsh")
-# print("Object 2 ==>",o2)
-# print("Object 2 ==>",o2.name)
-# print("Object 1 ==>",o1.name)
+o2 = SingleTon("Harsh")
+print("Object 2 ==>",o2)
+print("Object 2 ==>",o2.name)
+print("Object 1 ==>",o1.name)
 
-# print(o1.__dict__)
-# print(o2.__dict__)
+print(o1.__dict__)
+print(o2.__dict__)
 
-# # Solution 3
-# from typing import Any
+# Solution 3
+from typing import Any
 
 
-# class SingleTonDecorator(object):
-#     def __init__(self,klass) -> None:
-#         self.klass = klass
-#         self.instance = None
+class SingleTonDecorator(object):
+    def __init__(self,klass) -> None:
+        self.klass = klass
+        self.instance = None
 
-#     def __call__(self, *args: Any, **kwargs: Any) -> Any:
-#         if self.instance == None:
-#             self.instance = self.klass(*args, **kwargs)
-#         return self.instance
+    def __call__(self, *args: Any, **kwargs: Any) -> Any:
+        if self.instance == None:
+            self.instance = self.klass(*args, **kwargs)
+        return self.instance
 
-# @SingleTonDecorator
-# class Logger(object):
-#     def __init__(self) -> None:
-#         self.start = None
+@SingleTonDecorator
+class Logger(object):
+    def __init__(self) -> None:
+        self.start = None
 
-#     def write(self,message):
-#         if self.start:
-#             print(f"{self.start} {message}")
-#         else:
-#             print(message)
+    def write(self,message):
+        if self.start:
+            print(f"{self.start} {message}")
+        else:
+            print(message)
 
-# o1 = Logger()
-# o1.start ="[0] =>"
-# o1.write("Hellow")
-# o2 = Logger()
-# o2.start ="[1] =>"
-# o1.write("Hellow Object 2")
+o1 = Logger()
+o1.start ="[0] =>"
+o1.write("Hellow")
+o2 = Logger()
+o2.start ="[1] =>"
+o1.write("Hellow Object 2")
 
 # Solution - 4
 class SingletonMeta(type):
