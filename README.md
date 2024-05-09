@@ -4,7 +4,9 @@ Advance OOPs concept in python and Projects
 ### Command to run Unit test cases
 - `python -m unittest test_calculator.py`
 
-## Interview questions and there answers `https://docs.google.com/presentation/d/1LpBBeZzI28dGTeHH8RZ1Zg7mIhdLIvCwff0jFdU1tTw/edit#slide=id.g16af66d63cd_0_698`
+## Interview questions and there answers 
+15 Questions - `https://docs.google.com/presentation/d/1LpBBeZzI28dGTeHH8RZ1Zg7mIhdLIvCwff0jFdU1tTw/edit#slide=id.g16af66d63cd_0_698`
+52 Questions - `https://docs.google.com/presentation/d/1aWCYuA6udOj7ZhVJbrV7UH4YMM9mkR5YonFxP2-fnC4/edit#slide=id.g16aee77fb65_0_413`
 
 1. What is the difference between list and tuples & list and Array?
 - 
