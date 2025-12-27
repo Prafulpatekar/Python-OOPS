@@ -2,7 +2,7 @@
 Pattern Name - Singleton
 Pattern Type - Creational Design Pattern
 """
-Solution 1
+# Solution 1
 class SingleTon(object):
     def __new__(cls,*args,**kwargs):
         if not hasattr(cls,"_instance"):
